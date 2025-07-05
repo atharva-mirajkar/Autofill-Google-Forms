@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Smart Autofill for Google Forms",
+  "version": "1.0",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["*://docs.google.com/forms/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "host_permissions": ["*://docs.google.com/forms/*"],
+  "action": {
+    "default_title": "Autofill Config"
+  },
+  "options_page": "options.html"
+}
